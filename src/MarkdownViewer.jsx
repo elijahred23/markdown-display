@@ -23,6 +23,10 @@ const MarkdownViewer = ({ markdown, setMarkdown }) => {
       }
     });
   };
+  const onPasteEventHandler = (e) => {
+    handlePaste(e);
+  };
+
 
   const handleMarkdownChange = (event) => {
     setMarkdown(event.target.value);
@@ -45,6 +49,7 @@ const MarkdownViewer = ({ markdown, setMarkdown }) => {
         value={markdown}
         onChange={handleMarkdownChange}
         placeholder="Enter your Markdown text here..."
+        onPaste={onPasteEventHandler}
       />
       <button onClick={handleMarkdownClear}>Clear</button>
       <button onClick={event=>window.print()}>Print</button>
