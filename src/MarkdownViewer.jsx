@@ -46,6 +46,7 @@ const MarkdownViewer = ({ markdown, setMarkdown }) => {
         onChange={handleMarkdownChange}
         placeholder="Enter your Markdown text here..."
       />
+      <button onClick={handleMarkdownClear}>Clear</button>
       <button onClick={event=>window.print()}>Print</button>
       <button onClick={handlePaste}>Paste</button>
       <span>
@@ -55,7 +56,6 @@ const MarkdownViewer = ({ markdown, setMarkdown }) => {
       Print After Paste <input type="checkbox" checked={printAfterPaste} onClick={event=>setPrintAfterPaste(!printAfterPaste)}/>
       </span>
       <ReactMarkdown>{renderedMarkdown}</ReactMarkdown>
-      <button onClick={handleMarkdownClear}>Clear Markdown</button>
     </div>
   );
 };
