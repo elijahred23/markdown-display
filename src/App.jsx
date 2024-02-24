@@ -6,8 +6,8 @@ const App = () => {
 
   return (
     <div>
+      <h3>Markdown Viewer</h3>
       <MarkdownViewer markdown={markdownContent} setMarkdown={setMarkdownContent} />
-      {/* Other components */}
     </div>
   );
 };
